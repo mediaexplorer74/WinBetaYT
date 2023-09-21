@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Admin\\source\\repos\\winbeta-video\\WinBeta Videos\\WinBeta Videos\\WinBeta Videos.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Admin\\source\\repos\\winbeta-video\\WinBeta Videos\\WinBeta Videos\\WinBeta Videos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\winbeta-video\\WinBeta Videos\\WinBeta Videos\\WinBeta Videos.csproj",
+        "projectName": "WinBeta Videos",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\winbeta-video\\WinBeta Videos\\WinBeta Videos\\WinBeta Videos.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\winbeta-video\\WinBeta Videos\\WinBeta Videos\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.15063"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/AvaloniaUI/AvaloniaUI/_packaging/avalonia-all/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.15063": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.15063": {
+          "dependencies": {
+            "Google.Apis.YouTube.v3": {
+              "target": "Package",
+              "version": "[1.9.2.1470, )"
+            },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.ApplicationInsights.PersistenceChannel": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.ApplicationInsights.WindowsApps": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MyToolkit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "MyToolkit.Extended": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

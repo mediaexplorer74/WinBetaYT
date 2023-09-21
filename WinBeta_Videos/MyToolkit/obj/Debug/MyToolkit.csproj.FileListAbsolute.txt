@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\bin\Debug\MyToolkit.dll
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\bin\Debug\MyToolkit.pdb
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\obj\Debug\MyToolkit.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\obj\Debug\MyToolkit.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\obj\Debug\MyToolkit.dll
+C:\Users\Admin\source\repos\MyToolkit\src\MyToolkit\obj\Debug\MyToolkit.pdb
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\bin\Debug\MyToolkit.dll
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\bin\Debug\MyToolkit.pdb
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\obj\Debug\MyToolkit.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\obj\Debug\MyToolkit.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\obj\Debug\MyToolkit.dll
+C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\obj\Debug\MyToolkit.pdb

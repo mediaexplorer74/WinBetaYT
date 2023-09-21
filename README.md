@@ -1,36 +1,25 @@
-# WinBeta Video
+# WinBeta_Videos
 
-WinBeta Video is a very simple Windows 10 app that displays and plays YouTube videos from the WinBeta YouTube channel.
+My fork of Dominic Maas' winbeta-video project for some micro-RnD
+
+## About
+The original WinBeta Video is a very simple Windows 10 app that displays and plays YouTube videos from the WinBeta YouTube channel.
 WinBeta Video requires the YouTube .NET API, and both MyToolkit and MyToolkit Extended (For playing YouTube Videos)
 ![Filter Images](/Images/videos.png)
 
-##Notes
-* Stable code is on the master branch (this code will not be changed within the next week)
-* Beta code is on the beta branch (this will be updated daily, even hourly)
+My fork is an attempt to fix all "Video not playing" issues.
 
-## Requirements
-* Windows 10 RTM Build (or higher)
-* YouTube v3 API ([NuGet] (https://www.nuget.org/packages/Google.Apis.YouTube.v3/))
-* MyToolkit ([NuGet] (https://www.nuget.org/packages/MyToolkit/))
-* MyToolkit Extended ([NuGet] (https://www.nuget.org/packages/MyToolkit.Extended/))
-
-## Features
-#### Filtering Videos
-![Filter Images](/Images/filter.png)
-
-#### Searching for Videos
-![Search Images](/Images/search.png)
-
-#### Watching Videos
-![Quality Images](/Images/quality.png)
-
-#### Sharing Videos
-![Share Images](/Images/share.png)
+## Tech moments
+- UWP
+- Win. SDK build: 19041 
+- Min. Win. SDK build: 10240 
 
 ## To Do
-* [x] View all Videos
-* [x] Play Videos
-* [x] Search for Videos
-* [x] Filter Videos
-* [x] Share Videos
-* [ ] Unlimited Scrolling
+* fix myToolkit.Extended
+
+## ..
+
+As is. No support. RnD only
+
+## .
+[m][e] 2023
