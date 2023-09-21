@@ -9,6 +9,9 @@ WinBeta Video requires the YouTube .NET API, and both MyToolkit and MyToolkit Ex
 
 My fork is an attempt to fix all "Video not playing" issues.
 
+## Status
+- Damaged. No video playing, sadly. Only WinBeta channel video list ok.
+
 ## Tech moments
 - UWP
 - Win. SDK build: 19041 
