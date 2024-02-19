@@ -1,4 +1,0 @@
-C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit.Extended.Uwp\MyToolkit.Extended.Uwp.csproj;x64
-C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\MyToolkit.csproj;neutral
-C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\MyToolkit\MyToolkit.csproj;neutral
-C:\Users\Admin\source\repos\Winbeta_Videos-new\WinBeta_Videos\WinBeta_Videos\WinBeta_Videos.csproj;x64

@@ -1,9 +1,10 @@
-# WinBeta_Videos
+# WinBetaYT
 
-My fork of Dominic Maas' winbeta-video project for some micro-RnD
+My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 
 ## About
-The original WinBeta Video is a very simple Windows 10 app that displays and plays YouTube videos from the WinBeta YouTube channel.
+The original WinBeta_Video is a very simple Windows 10 app that displays and plays YouTube videos 
+from the WinBeta YouTube channel.
 WinBeta Video requires the YouTube .NET API, and both MyToolkit and MyToolkit Extended (For playing YouTube Videos)
 ![Filter Images](/Images/videos.png)
 
@@ -25,4 +26,4 @@ My fork is an attempt to fix all "Video not playing" issues.
 As is. No support. RnD only
 
 ## .
-[m][e] 2023
+[m][e] 2024
