@@ -11,6 +11,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MyToolkit.Extended", "MyToo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToolkit.Extended.Uwp", "MyToolkit.Extended.Uwp\MyToolkit.Extended.Uwp.csproj", "{28CDF611-02D2-474C-AC37-616024CAF0C1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libvideo", "libvideo\libvideo.csproj", "{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,22 @@ Global
 		{28CDF611-02D2-474C-AC37-616024CAF0C1}.Release|x64.Build.0 = Release|x64
 		{28CDF611-02D2-474C-AC37-616024CAF0C1}.Release|x86.ActiveCfg = Release|x86
 		{28CDF611-02D2-474C-AC37-616024CAF0C1}.Release|x86.Build.0 = Release|x86
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|ARM.Build.0 = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|x64.Build.0 = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|ARM.ActiveCfg = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|ARM.Build.0 = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|x64.ActiveCfg = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|x64.Build.0 = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D160CDB-EAB3-4D82-8AF7-8B0C59D89D05}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

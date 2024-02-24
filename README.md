@@ -1,4 +1,4 @@
-# WinBetaYT v.1.0.0 pre-pre-pre-alpha
+# WinBetaYT v.1.0.0 pre-pre-alpha
 
 My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 
@@ -16,7 +16,10 @@ So, I'll try to fix all "Video not playing" issues.
 
 
 ## Status
-- Damaged. No video playing, sadly. Only WinBeta channel video list ok.
+- Youtube WinBeta channel video list seems to be ok.
+- I tryied to "inject" libvideo library (to save damaged myToolkit.Extended's YouTube feature) 
+- No success. No video playing, sadly. Standard Media Player begins to do infinite re-cycling :(
+....however, my internet tooo slow? idk... ;)
 
 
 ## Tech moments

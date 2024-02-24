@@ -268,7 +268,7 @@ namespace WinBeta_Videos
             // Loop through all items in upload playlist
             foreach (var playlistItem in playlistResponse.Items)
             {
-                // Create a video object to pass into the data context
+                // Create a ytvideo object to pass into the data context
                 videos_data.Add (new Video() {
                     Title = playlistItem.Snippet.Title, // Video Title
                     Thumbnail = GetVideoThumbnail(playlistItem.Snippet.Thumbnails), // Video thumbnail <- This function gets the highest quality avaliable
@@ -304,7 +304,7 @@ namespace WinBeta_Videos
             {
                 if (videoItem.Id.Kind == "youtube#video")
                 {
-                    // Create a video object to pass into the data context
+                    // Create a ytvideo object to pass into the data context
                     Video video = new Video()
                     {
                         Title = videoItem.Snippet.Title, // Video Title
@@ -313,7 +313,7 @@ namespace WinBeta_Videos
                         Id = videoItem.Id.VideoId
                     };
 
-                    // Add video to data context list
+                    // Add ytvideo to data context list
                     videos_data.Add(video);
                 }
             }

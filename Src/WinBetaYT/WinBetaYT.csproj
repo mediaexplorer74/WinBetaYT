@@ -170,6 +170,10 @@
     <None Include="WinBetaYT_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\libvideo\libvideo.csproj">
+      <Project>{4d160cdb-eab3-4d82-8af7-8b0c59d89d05}</Project>
+      <Name>libvideo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyToolkit.Extended.Uwp\MyToolkit.Extended.Uwp.csproj">
       <Project>{28cdf611-02d2-474c-ac37-616024caf0c1}</Project>
       <Name>MyToolkit.Extended.Uwp</Name>
