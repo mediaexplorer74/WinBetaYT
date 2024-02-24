@@ -4,8 +4,10 @@ My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 
 
 ## Screenshots
-![](/Images/shot01.png)
-![](/Images/shot02.png)
+![x64](/Images/shot01.png)
+![x64](/Images/shot02.png)
+![ARM](/Images/shot03.png)
+![ARM](/Images/shot04.png)
 
 
 ## About
