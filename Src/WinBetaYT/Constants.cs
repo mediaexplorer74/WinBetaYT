@@ -2,7 +2,7 @@
 
 namespace WinBeta_Videos
 {
-    internal class Helper
+    internal class Constants
     {
         internal static string GetApiKey()
         {

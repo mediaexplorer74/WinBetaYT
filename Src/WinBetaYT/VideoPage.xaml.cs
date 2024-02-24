@@ -75,8 +75,8 @@ namespace WinBeta_Videos
 
             dataTransferManager = DataTransferManager.GetForCurrentView();
 
-            ChosenQuality = "144p";
-            ChosenQualityInt = 144;
+            ChosenQuality = "480p";
+            ChosenQualityInt = 480;
         }
 
         private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
@@ -114,7 +114,7 @@ namespace WinBeta_Videos
 
             link = "http://youtube.com/watch?v=" + ytvideo.Id;
 
-            /*
+            
             /// Need to fix
             try
             {
@@ -133,7 +133,7 @@ namespace WinBeta_Videos
             {
                 Debug.WriteLine("[ex] link.Replace error: " + ex.Message);
             }
-            */
+            
 
             try
             {

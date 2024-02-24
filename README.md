@@ -1,4 +1,4 @@
-# WinBetaYT v.1.0.0 pre-pre-alpha
+# WinBetaYT v.1.0.0 pre-alpha
 
 My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 
@@ -23,9 +23,10 @@ So, I'll try to fix all "Video not playing" issues.
 
 
 ## Tech moments
-- UWP
+- UWP platform (targets: x86, x64, ARM)
 - Win. SDK build: 19041 
-- Min. Win. SDK build: 10240 
+- Min. Win. SDK build: 14393
+- You need to setup your own youtube apikey (see Constants.cs).
 
 
 ## To Do

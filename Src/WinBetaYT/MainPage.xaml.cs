@@ -100,7 +100,7 @@ namespace WinBeta_Videos
 
             youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = Helper.GetApiKey(), // Hidden Away (API_KEY)
+                ApiKey = Constants.GetApiKey(), // Hidden Away (API_KEY)
                 ApplicationName = "WinBeta Videos"
             });
 

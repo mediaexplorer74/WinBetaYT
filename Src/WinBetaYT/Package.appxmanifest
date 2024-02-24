@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
 xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" 
-IgnorableNamespaces="uap mp uap3">
+xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" 
+xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" 
+IgnorableNamespaces="uap mp uap3 iot uap4">
   <Identity Name="ME.WinBetaYTV1" Publisher="CN=Admin" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="a2554722-33fb-4fd4-86a5-f9284408d202" PhonePublisherId="22000000-3311-1100-0040-800006000202" />
   <Properties>
@@ -43,8 +45,10 @@ IgnorableNamespaces="uap mp uap3">
     <uap:Capability Name="picturesLibrary" />
     <uap:Capability Name="musicLibrary" />
     <uap3:Capability Name="backgroundMediaPlayback" />
-    <uap3:Capability Name="remoteSystem" />
     <uap:Capability Name="removableStorage" />
-    <DeviceCapability Name="lowLevel" />
+    <uap3:Capability Name="userNotificationListener"/>
+    <uap4:Capability Name="userDataTasks"/>
+    <iot:Capability Name="systemManagement"/>
+    <DeviceCapability Name="location"/>
   </Capabilities>
 </Package>
