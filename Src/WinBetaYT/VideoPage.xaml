@@ -5,6 +5,7 @@
     xmlns:local="using:WinBeta_Videos"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:lvs="using:LibVLCSharp.Platforms.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <MenuFlyout x:Key="settingsFlyout" x:Name="settingsFlyout">
@@ -23,9 +24,13 @@
         <Grid Background="#FFE6E6E6" Height="50" VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="#FFC5C5C5">
             <AppBarButton x:Name="settingsButton" Icon="Setting" Foreground="#FF0078D7" HorizontalAlignment="Right" Flyout="{StaticResource settingsFlyout}"/>
             <AppBarButton x:Name="shareButton" Icon="ReShare" Foreground="#FF0078D7" Tapped="shareButton_Tapped"/>
-            <TextBlock x:Name="videosTitle" Text="Video"  HorizontalAlignment="Center" TextAlignment="Center" FontWeight="SemiBold" FontSize="20" Foreground="#FF4F4F4F" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="videosTitle" Text="Video"  HorizontalAlignment="Center" TextAlignment="Center" FontWeight="SemiBold" FontSize="20" Foreground="#FF4F4F4F" 
+                       VerticalAlignment="Center"></TextBlock>
         </Grid>
-        <MediaElement AreTransportControlsEnabled="True" x:Name="mediaPlayer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,50,0,0"></MediaElement>
+
+        <!--MediaElement AreTransportControlsEnabled="True" x:Name="mediaPlayer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,50,0,0"></MediaElement-->
+        <lvs:VideoView x:Name="VideoView"></lvs:VideoView>
+
         <ProgressRing x:Name="progressRing" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="64"/>
     </Grid>
 </Page>

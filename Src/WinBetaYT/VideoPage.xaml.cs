@@ -17,18 +17,24 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
+using LibVLCSharp.Shared;//using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-using VideoLibrary; //using MyToolkit.Multimedia;
+using VideoLibrary;
+using Windows.Storage; //using MyToolkit.Multimedia;
 
 
 namespace WinBeta_Videos
 {
-    
+
     public sealed partial class VideoPage : Page
     {
+        private LibVLC _libVLC;
+
+        private MediaPlayer _mediaPlayer;
+
         MainPage.Video ytvideo;
+
         //YouTubeQuality selectedQuality = YouTubeQuality.QualityHigh;//
         //YouTubeUri mainVideo;
         DataTransferManager dataTransferManager;
@@ -36,6 +42,7 @@ namespace WinBeta_Videos
         /// <summary>
         /// Youtube "entities"
         /// </summary>
+        /*
         public string link { get; set; }
         public string Title { get; set; }
         public string FileName { get; set; }
@@ -47,14 +54,16 @@ namespace WinBeta_Videos
         public string VideoRes { get; set; }
         public string FPS { get; set; }
         public string VideoID { get; set; }
-        public string ChosenQuality { get; set; }
-        public int ChosenQualityInt { get; set; }
         public bool IsHDQuality { get; set; }
         public YouTubeVideo video { get; set; }
         public YouTubeVideo maxVideo { get; set; }
         public YouTubeVideo maxBitrate { get; set; }
         public string ThrownEncodingError { get; set; }
         public IEnumerable<YouTubeVideo> videoInfos { get; set; }
+        */
+
+        public string ChosenQuality { get; set; }
+        public int ChosenQualityInt { get; set; }
 
 
         public VideoPage()
@@ -62,7 +71,8 @@ namespace WinBeta_Videos
             this.InitializeComponent();
 
             Windows.UI.Core.SystemNavigationManager
-                .GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+                .GetForCurrentView().AppViewBackButtonVisibility
+                = AppViewBackButtonVisibility.Visible;
 
             Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += (s, a) =>
             {
@@ -76,7 +86,8 @@ namespace WinBeta_Videos
             dataTransferManager = DataTransferManager.GetForCurrentView();
 
             ChosenQuality = "480p";
-            ChosenQualityInt = 480;
+            ChosenQualityInt = 480;           
+           
         }
 
         private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
@@ -86,7 +97,7 @@ namespace WinBeta_Videos
             dataPackage.Properties.Description = "Sharing Video Link";
 
             //RnD
-            dataPackage.SetWebLink(new Uri("http://youtube.com/watch?v=" + ytvideo.Id));
+            dataPackage.SetWebLink(new Uri("https://youtube.com/watch?v=" + ytvideo.Id));
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -101,93 +112,78 @@ namespace WinBeta_Videos
             }
             catch (Exception ex) // AggregateException
             {
-                MessageDialog m = new MessageDialog("Could play video: " + ex.Message, 
+                MessageDialog m = new MessageDialog("Could play video: " + ex.Message,
                     "WinBeta Videos Error");
                 await m.ShowAsync();
             }
         }
 
-     
+
         private async Task LoadPage()
         {
-            progressRing.IsActive = true;
+            //progressRing.IsActive = true;
 
-            link = "http://youtube.com/watch?v=" + ytvideo.Id;
+            // use YouTubeVideo client
+            using (Client<YouTubeVideo> service = Client.For(YouTube.Default))
+            {
+                // set video id
+                string id = ytvideo.Id;
 
+                // exploring yt video
+
+                YouTubeVideo video = service.GetVideo("https://youtube.com/watch?v=" + id);
+
+               
+
+                try
+                {
+                    
+
+                    Loaded += (s, e) =>
+                    {
+                        _libVLC = new LibVLC(VideoView.SwapChainOptions);
+                        _mediaPlayer = new MediaPlayer(_libVLC);
+                        VideoView.MediaPlayer = _mediaPlayer;
+
+                        _mediaPlayer.Play(new Media(
+                            _libVLC,
+                           video.Uri,//"https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+                            FromType.FromLocation));
+                    };
+
+
+                    Unloaded += (s, e) =>
+                    {
+                        VideoView.MediaPlayer = null;
+                        _mediaPlayer.Dispose();
+                        _libVLC.Dispose();
+                    };
+
+                    //progressRing.IsActive = false;
+                    
+                }
+                catch (Exception ex)
+                {
+                    if (ex.HResult == -2146233088)
+                    {
+                        Debug.WriteLine("[ex] Quality Not Supported, try something else");
+                    }
+
+                    MessageDialog m = new MessageDialog(
+                    "Could play video: " + ex.Message, "WinBeta Videos Error");
+
+                    await m.ShowAsync();
+
+                    // progressRing.IsActive = false;
+                }
+            }//using 
+                                   
+            //progressRing.IsActive = true;          
             
-            /// Need to fix
-            try
-            {
-                if (link.Contains("http:"))
-                {
-                    string fixedlink = link.Replace("http:", "https:");
-                    link = fixedlink;
-                }
-                if (link.Contains("m."))
-                {
-                    string fixedlink = link.Replace("m.", "www.");
-                    link = fixedlink;
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("[ex] link.Replace error: " + ex.Message);
-            }
-            
-
-            try
-            {
-                //RnD
-                //var mainVideo =
-                //    await MyToolkit.Multimedia.YouTube.GetVideoUriAsync(
-                //        ytvideo.Id/*"SuBDt7GCbIc"*/, default);// selectedQuality);
-
-                //********************************************************************
-                // starting point for YouTube actions
-                YouTube youTube = YouTube.Default;
-
-                // gets a Video object with info about the video
-                YouTubeVideo Justvideo = youTube.GetVideo(link);
-                videoInfos = youTube.GetAllVideosAsync(link).GetAwaiter().GetResult();
-
-                //ProgressText.Text = "";
-
-                //video = videoInfos.First(i => i.IsAdaptive);
-                video = videoInfos.First(i => i.Resolution == ChosenQualityInt);
-
-                Debug.WriteLine(video.Uri);
-                //Debug.WriteLine("[i]  ChosenQualityInt=", ChosenQualityInt);
-                //********************************************************************
-
-                Uri result;
-                if (!Uri.TryCreate(video.Uri, UriKind.Absolute, out result))
-                {
-                    Debug.WriteLine("[ex] Wrong uri!");    
-                }
-
-                mediaPlayer.Source = result;//ParseUri(video.Uri);//mainVideo.Uri;
+        }//LoadPage
 
 
-
-                mediaPlayer.Play();
-                progressRing.IsActive = false;
-            }
-            catch (Exception ex)
-            {
-                if (ex.HResult == -2146233088)
-                {
-                    Debug.WriteLine("[ex] Quality Not Supported, try something else");
-                }
-                
-                MessageDialog m = new MessageDialog(/*"Quality Not Supported, try something else"*/
-                "Could play video: " + ex.Message, "WinBeta Videos Error");
-
-                await m.ShowAsync();
-                                            
-                progressRing.IsActive = false;
-            }     
-        }
-
+        // MenuFlyoutItem_Click
         private async void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
             var s = sender as MenuFlyoutItem;
@@ -255,14 +251,21 @@ namespace WinBeta_Videos
                 await m.ShowAsync();
             }
 
-        }
+        }//MenuFlyoutItem_Click
 
+
+        // shareButton_Tapped
         private void shareButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
             dataTransferManager.DataRequested -= OnDataRequested;
             dataTransferManager.DataRequested += OnDataRequested;
 
             DataTransferManager.ShowShareUI();
+        }//shareButton_Tapped
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+           // 
         }
     }
 }

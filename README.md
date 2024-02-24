@@ -1,4 +1,4 @@
-# WinBetaYT v.1.0.0 pre-alpha
+# WinBetaYT v.1.0.3 alpha
 
 My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 
@@ -11,26 +11,25 @@ My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD...
 ## About
 The original WinBeta_Video is a very simple Windows 10 app that displays and plays YouTube videos 
 from the WinBeta YouTube channel.
-WinBeta Video requires the YouTube .NET API, and both MyToolkit and MyToolkit Extended (For playing YouTube Videos).
-So, I'll try to fix all "Video not playing" issues.
+My fork still required the YouTube .NET API now, but not requred both MyToolkit and MyToolkit Extended (For playing YouTube Videos) at now.
+I switched the project from mytoolkit to (on) LibVideo and VLCSharp video processing system.
 
 
 ## Status
 - Youtube WinBeta channel video list seems to be ok.
-- I tryied to "inject" libvideo library (to save damaged myToolkit.Extended's YouTube feature) 
-- No success. No video playing, sadly. Standard Media Player begins to do infinite re-cycling :(
-....however, my internet tooo slow? idk... ;)
+- I tryied to "inject" libvideo library. I catch problems with standard MediaElement. 
+- A day after, I get success on video playing when I tried to use VLCSharp :) 
 
 
 ## Tech moments
 - UWP platform (targets: x86, x64, ARM)
 - Win. SDK build: 19041 
-- Min. Win. SDK build: 14393
+- Min. Win. SDK build: 15063 
 - You need to setup your own youtube apikey (see Constants.cs).
 
 
 ## To Do
-* fix myToolkit.Extended bugs after "min. w10m sdk downshifting"
+* fix UI controls (Video quality, etc.)
 
 ## ..
 

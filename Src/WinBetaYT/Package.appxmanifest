@@ -4,7 +4,7 @@ xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
 xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" 
 xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" 
 IgnorableNamespaces="uap mp uap3 iot uap4">
-  <Identity Name="ME.WinBetaYTV1" Publisher="CN=Admin" Version="1.0.0.0" />
+  <Identity Name="ME.WinBetaYTV1" Publisher="CN=Admin" Version="1.0.3.0" />
   <mp:PhoneIdentity PhoneProductId="a2554722-33fb-4fd4-86a5-f9284408d202" PhonePublisherId="22000000-3311-1100-0040-800006000202" />
   <Properties>
     <DisplayName>WinBetaYT</DisplayName>
