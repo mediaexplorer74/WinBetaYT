@@ -33,6 +33,10 @@ I switched the project from mytoolkit to (on) LibVideo and VLCSharp video proces
 * Create Settings page for "APIkey tuning".  
 * fix UI controls (Video quality, etc.)
 
+## License / Reference(s)
+- MIT
+- https://github.com/DominicMaas/winbeta-video Original "WinBeta Video" project
+
 ## ..
 
 As is. No support. RnD only
