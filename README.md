@@ -31,7 +31,7 @@ I switched the project from mytoolkit to (on) LibVideo and VLCSharp video proces
 
 ## To Do
 * Create Settings page for "APIkey tuning".  
-* fix UI controls (Video quality, etc.)
+* Try to improve/fix VideoPage's UI controls (Video quality, etc.)
 * Continue some experiments with "Astoria compatibility" (hardcore!)
 
 ## License / Reference(s)
