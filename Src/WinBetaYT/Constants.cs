@@ -6,7 +6,7 @@ namespace WinBeta_Videos
     {
         internal static string GetApiKey()
         {
-            return ""; // Youtube API key
+            return "AIzaSyBo0ZFHKVnSs2RGxm8ckRVuBtSh1PQvL94"; // Youtube API key
         }
     }
 }

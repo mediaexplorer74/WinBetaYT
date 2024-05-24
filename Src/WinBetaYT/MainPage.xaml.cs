@@ -108,20 +108,7 @@ namespace WinBeta_Videos
 
         }
 
-      //  private async void OnPageLoaded(object sender, RoutedEventArgs e)
-        //{
-
-            // Initialize the YouTube Service
-           // youtubeService = new YouTubeService(new BaseClientService.Initializer() {
-           //     ApiKey = Helper.GetApiKey(), // Hidden Away (API_KEY)
-           //     ApplicationName = "WinBeta Videos"
-           // });
-
-           // await RunGetVideos();
-
-
-
-       // }
+      
 
         private async void refreshButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
