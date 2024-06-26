@@ -104,7 +104,7 @@ namespace LibVLCSharp.Shared
         }
     }
 
-    internal readonly struct DialogId
+    internal struct DialogId
     {
         internal DialogId(IntPtr nativeReference)
         {

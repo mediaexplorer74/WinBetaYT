@@ -8,7 +8,7 @@ namespace LibVLCSharp.Shared
 {
     internal abstract class EventManager
     {
-        internal readonly struct Native
+        internal struct Native
         {
             [DllImport(Constants.LibraryName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "libvlc_event_attach")]
             internal static extern int LibVLCEventAttach(IntPtr eventManager, EventType eventType, EventCallback eventCallback,
@@ -73,11 +73,10 @@ namespace LibVLCSharp.Shared
             }
         }
 
-#if IOS
-        internal protected static LibVLCEvent RetrieveEvent(IntPtr eventPtr) => MarshalUtils.PtrToStructure<LibVLCEvent>(eventPtr);
-#else
-        internal protected LibVLCEvent RetrieveEvent(IntPtr eventPtr) => MarshalUtils.PtrToStructure<LibVLCEvent>(eventPtr);
-#endif
+        internal protected LibVLCEvent RetrieveEvent(IntPtr eventPtr)
+        {
+            return MarshalUtils.PtrToStructure<LibVLCEvent>(eventPtr);
+        }
 
         internal protected void OnEventUnhandled(object sender, EventType eventType)
             => throw new InvalidOperationException($"eventType {nameof(eventType)} unhandled by type {sender.GetType().Name}");

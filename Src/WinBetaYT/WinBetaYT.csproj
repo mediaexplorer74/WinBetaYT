@@ -22,7 +22,7 @@
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Never</AppxBundle>
@@ -221,7 +221,7 @@
       <Name>libvideo</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibVLCSharp\LibVLCSharp.csproj">
-      <Project>{a77a7408-5254-4824-9852-42a2bb1e81c6}</Project>
+      <Project>{e7a78b56-21f4-4e06-b1bf-aa3c77c96b6e}</Project>
       <Name>LibVLCSharp</Name>
     </ProjectReference>
   </ItemGroup>

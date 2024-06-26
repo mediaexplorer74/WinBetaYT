@@ -4,10 +4,10 @@ xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
 xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" 
 xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" 
 IgnorableNamespaces="uap mp uap3 iot uap4">
-  <Identity Name="ME.WinBetaYTV1" Publisher="CN=Admin" Version="1.0.5.0" />
+  <Identity Name="ME.WinBetaYTV1" Publisher="CN=Admin" Version="1.0.6.0" />
   <mp:PhoneIdentity PhoneProductId="a2554722-33fb-4fd4-86a5-f9284408d202" PhonePublisherId="22000000-3311-1100-0040-800006000202" />
   <Properties>
-    <DisplayName>WinBetaYT v1.0.5</DisplayName>
+    <DisplayName>WinBetaYT v1.0.6</DisplayName>
     <PublisherDisplayName>mediaexplorer</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -20,7 +20,7 @@ IgnorableNamespaces="uap mp uap3 iot uap4">
 
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="WinBeta_Videos.App">
-      <uap:VisualElements DisplayName="WinBetaYT 1.0.5" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="WinBeta Youtube channel app" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="WinBetaYT 1.0.6" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="WinBeta Youtube channel app" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
