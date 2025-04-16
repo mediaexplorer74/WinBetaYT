@@ -15,11 +15,13 @@
         
         <Flyout x:Key="searchFlyout">
             <Grid Height="35" Width="190">
-                <SearchBox x:Name="mainSearchBox" HorizontalAlignment="Stretch"
+                <SearchBox x:Name="mainSearchBox" 
+                           HorizontalAlignment="Stretch"
                            VerticalAlignment="Stretch" 
                            QuerySubmitted="mainSearchBox_QuerySubmitted" 
-                           SearchHistoryEnabled="False" 
-                           PlaceholderText="Search for videos..."/>
+                           SearchHistoryEnabled="True" 
+                           PlaceholderText="Search for videos..." 
+                           IsEnabled="True"/>
             </Grid>
         </Flyout>
     </Page.Resources>

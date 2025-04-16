@@ -1,13 +1,13 @@
-# WinBetaYT v.1.0.6-alpha
+# WinBetaYT v.1.0.7-alpha
 ![Logo](/Images/logo.png)
 
 My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD. :)
 
-Main goal is to adapt this app to W10M (builds 14393+, or, maybe, even 10240...)
+Main goal is to repair Youtube work (ideally: witnout any VPN) & adapt this app to W10M (UI)
 
 ## Screenshots
-![x64](/Images/shot1.png)
-![ARM](/Images/shot2.png)
+![W11Tiny](/Images/sshot1.png)
+![W11Tiny](/Images/sshot2.png)
 
 ## About
 The original WinBeta_Video is a very simple Windows 10 app that displays and plays YouTube videos 
@@ -18,8 +18,8 @@ I switched the project from mytoolkit to (on) LibVideo and VLCSharp video proces
 
 ## Status
 - Youtube api v3 used. Result: WinBeta channel video list seems to be ok.
-- VLCSharp library used. Result: success on youtube video playing. 
-- libvideo updated to fix youtube id - url resolving.  
+- VLCSharp library still here/there. 
+- my experimental libvideo used for YT video stream url resolving (at now -- no success!)  
 
 
 ## Tech moments
@@ -30,7 +30,7 @@ I switched the project from mytoolkit to (on) LibVideo and VLCSharp video proces
 
 
 ## To Do
-* Create Settings page for "APIkey tuning".  
+* Create Settings page for "APIkey tuning"  
 * Try to improve/fix VideoPage's UI controls (Video quality, etc.)
 * Continue some experiments with "Astoria compatibility" (hardcore!)
 
