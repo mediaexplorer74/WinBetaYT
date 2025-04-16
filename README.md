@@ -6,8 +6,8 @@ My fork of Dominic Maas' Winbeta_Video project for my own micro-RnD. :)
 Main goal is to repair Youtube work (ideally: witnout any VPN) & adapt this app to W10M (UI)
 
 ## Screenshots
-![W11Tiny](/Images/sshot1.png)
-![W11Tiny](/Images/sshot2.png)
+![W11Tiny](/Images/sshot01.png)
+![W11Tiny](/Images/sshot02.png)
 
 ## About
 The original WinBeta_Video is a very simple Windows 10 app that displays and plays YouTube videos 
